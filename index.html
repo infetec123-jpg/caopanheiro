@@ -5,26 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#F3FAF7">
 <title>CãoPanheiro | Os melhores produtos e agradinhos, seu pet vai amar.</title>
-<meta name="description" content="Loja especializada em vender produtos de cuidado e mimo para seu pet. Coleiras, produtos de limpeza, brinquedos e acessórios, compra segura e com atendimento a disposição para dúvidas.">
+<meta name="description" content="Loja especializada em vender produtos de cuidado e mimo para seu pet. Coleiras, produtos de limpeza, brinquedos e acessórios, compra segura e com atendimento a disposição para dúvias.">
 
 <!-- Open Graph -->
 <meta property="og:title" content="CãoPanheiro | O melhor para seu pet">
-<meta property="og:description" content="Os cuidados com seu pet não podem parar, amá-los e mimá-los é também uma demonstração de carinho.">
+<meta property="og:description" content="Os cuidados com seu pet não podem parar, ama-los e mima-los é também uma demonstração de carinho.">
 <meta property="og:type" content="website">
 
-<!-- Fonts -->
+<!-- Fonts (com preconnect para performance) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 
-<!-- SEO Local -->
+<!-- SEO Local (GEO) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "PetStore",
+  "@type": "WebPetShop",
   "name": "CãoPanheiro",
   "image": "https://seudominio.com/logo.png",
-  "description": "Loja especializada em vender produtos de cuidado e mimo para seu pet. Coleiras, produtos de limpeza, brinquedos e acessórios, compra segura e com atendimento a disposição para dúvidas.",
+  "description": "Loja especializada em vender produtos de cuidado e mimo para seu pet. Coleiras, produtos de limpeza, brinquedos e acessórios, compra segura e com atendimento a disposição para dúvias.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Rua das Olivas, 1234",
@@ -62,7 +62,7 @@
   --font-body:'Inter',system-ui,-apple-system,sans-serif;
   --radius:14px;
   --shadow:0 8px 30px rgba(54, 104, 86, .12);
-  --transition:.3s cubic-bezier(.4,0,.2,1);
+  --transition:.3s cubic-bezier(.4,0,.2,5);
 }
 html{scroll-behavior:smooth}
 body{
@@ -314,13 +314,15 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .stat-label{font-size:.85rem;color:var(--text-muted)}
 
 /* ============ SERVIÇOS ============ */
-.services-grid{display:grid;grid-template-columns:1fr;gap:20px}
+.services-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-items:stretch}
 .service-card{
   background:var(--bg-card);border:1px solid var(--border);
-  border-radius:var(--radius);padding:28px;
-  display:flex;gap:18px;align-items:flex-start;
-  transition:var(--transition);
+  border-radius:var(--radius);padding:24px;
+  display:flex;gap:16px;align-items:flex-start;min-width:0;width:100%;
+  transition:var(--transition);overflow:hidden;
 }
+.service-content{flex:1;min-width:0;overflow-wrap:anywhere}
+.service-symbol{font-size:1.35rem;line-height:1;color:#fff}
 .service-card:hover{border-color:var(--accent);transform:translateY(-3px)}
 .service-icon{
   flex-shrink:0;width:48px;height:48px;border-radius:12px;
@@ -424,10 +426,10 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s cubic-bezier(.4,0,.2,1)}
 .reveal.visible{opacity:1;transform:none}
 
-/* ============ RESPONSIVO ============ */
+/* ============ RESPONSIVO (MOBILE-FIRST) ============ */
 @media (min-width:640px){
-  .products-grid{grid-template-columns:repeat(2,1fr)}
-  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .products-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .hero-trust{grid-template-columns:repeat(4,1fr)}
   .footer-grid{grid-template-columns:1.5fr 1fr 1fr}
 }
@@ -456,7 +458,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   <div class="container">
     <nav class="nav">
       <a href="#" class="logo" aria-label="CãoPanheiro - Página inicial">
-        <span class="logo-mark">T</span>
+        <span class="logo-mark">C</span>
         Cão<span>Panheiro</span>
       </a>
 
@@ -467,7 +469,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
         <li><a href="#localizacao">Localização</a></li>
       </ul>
 
-      <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento!" target="_blank" rel="noopener" class="btn btn-primary nav-cta" data-ga="header-cta">
+      <a href="https://wa.me/20002020202112?text=Quero%20ver%20prodto%20um%20or%C3%A7amento!" target="_blank" rel="noopener" class="btn btn-primary nav-cta" data-ga="header-cta">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.4A10 10 0 1012 2zm5.4 14.3c-.2.6-1.3 1.2-1.8 1.2-.5.1-1.1.1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-4-4.6-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .4l-.4.6c-.2.2-.3.4-.1.6.2.3.7 1.2 1.6 1.9 1.1.9 1.9 1.2 2.2 1.4.2.1.4.1.6-.1.1-.2.6-.7.8-1 .1-.2.3-.2.5-.1l2 1c.2.1.4.1.4.2 0 .1 0 .6-.2 1.2z"/></svg>
         Orçamento
       </a>
@@ -478,154 +480,239 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
     </nav>
   </div>
 </header>
-<!-- ================= LOCALIZAÇÃO ================= -->
-<section class="section location" id="localizacao">
+
+<!-- Menu mobile -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#produtos">Produtos <span>→</span></a>
+  <a href="#historia">Nossa História <span>→</span></a>
+  <a href="#servicos">Serviços <span>→</span></a>
+  <a href="#localizacao">Localização <span>→</span></a>
+  <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento!" target="_blank" rel="noopener" class="btn btn-primary btn-whats">
+    Falar no WhatsApp
+  </a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">Onde estamos</span>
-      <h2 class="section-title">Venha nos visitar</h2>
-      <p class="section-desc">Estamos prontos para receber você e seu melhor amigo com muito carinho.</p>
-    </div>
-
-    <div class="location-grid">
-      <div class="location-info reveal">
-        <div class="info-item">
-          <div class="info-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 21s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/>
-              <circle cx="12" cy="9" r="2"/>
-            </svg>
-          </div>
-          <div>
-            <h4>Endereço</h4>
-            <p>Rua das Olivas, 1234 — São Paulo, SP</p>
-          </div>
-        </div>
-
-        <div class="info-item">
-          <div class="info-icon">
-            <svg viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="9"/>
-              <path d="M12 7v5l3 2"/>
-            </svg>
-          </div>
-          <div>
-            <h4>Horário de funcionamento</h4>
-            <p>Segunda a sexta: 08h às 19h</p>
-            <p>Sábado: 07h às 14h</p>
-          </div>
-        </div>
-
-        <div class="info-item">
-          <div class="info-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.4 19.4 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7l.5 3a2 2 0 01-.6 1.9L7.1 10.5a16 16 0 006.4 6.4l1.9-1.9a2 2 0 011.9-.6l3 .5a2 2 0 011.7 2z"/>
-            </svg>
-          </div>
-          <div>
-            <h4>Contato</h4>
-            <p>(11) 99999-9999</p>
-          </div>
-        </div>
+    <div class="hero-content">
+      <span class="hero-badge">
+        <span class="dot"></span>
+        Carinho, cuidado e bem-estar em cada visita
+      </span>
+      <h1>
+        Seu pet merece cuidado e carinho.<br>
+        <span class="highlight">Cuidado completo</span> para o seu melhor amigo.
+      </h1>
+      <p>
+        Há 10 anos cuidando de pets com carinho. Oferecemos estética pet, produtos de qualidade e orientação para ajudar você a cuidar ainda melhor do seu companheiro.
+      </p>
+      <div class="hero-actions">
+        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento!" target="_blank" rel="noopener" class="btn btn-primary" data-ga="hero-cta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.4A10 10 0 1012 2zm5.4 14.3c-.2.6-1.3 1.2-1.8 1.2-.5.1-1.1.1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-4-4.6-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .4l-.4.6c-.2.2-.3.4-.1.6.2.3.7 1.2 1.6 1.9 1.1.9 1.9 1.2 2.2 1.4.2.1.4.1.6-.1.1-.2.6-.7.8-1 .1-.2.3-.2.5-.1l2 1c.2.1.4.1.4.2 0 .1 0 .6-.2 1.2z"/></svg>
+          Agende um horário
+        </a>
+        <a href="#produtos" class="btn btn-ghost">Ver produtos</a>
       </div>
-
-      <div class="map-box reveal">
-        <iframe
-          src="https://www.google.com/maps?q=Rua+das+Olivas+1234+Sao+Paulo&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Localização da CãoPanheiro">
-        </iframe>
-        <div class="map-overlay">
-          <span>Rua das Olivas, 1234 — São Paulo, SP</span>
-          <a href="https://www.google.com/maps/search/?api=1&query=Rua+das+Olivas+1234+Sao+Paulo" target="_blank" rel="noopener">
-            Ver rota →
-          </a>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <span class="trust-num">10+</span>
+          <span class="trust-label">Anos no mercado de pets</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-num">5.000+</span>
+          <span class="trust-label">Famílias atendidas</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-num">1.000+</span>
+          <span class="trust-label">Produtos em estoque</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-num">99%</span>
+          <span class="trust-label">Confiança</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
+<!-- ================= PRODUTOS ================= -->
+<section class="section" id="produtos">
   <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="#" class="logo">
-          <span class="logo-mark">T</span>
-          Cão<span>Panheiro</span>
-        </a>
-        <p>Carinho, cuidado e bem-estar em cada visita. Tudo o que seu melhor amigo precisa, em um só lugar.</p>
+    <div class="section-header reveal">
+      <span class="section-tag">Produtos</span>
+      <h2 class="section-title">Tudo que seu pet precisa</h2>
+      <p class="section-desc">Produtos de qualidade, marcas confiáveis e estoque pronto para retirada ou entrega.</p>
+    </div>
 
-        <div class="social-links">
-          <a href="#" aria-label="Instagram">
-            <svg viewBox="0 0 24 24">
-              <rect x="3" y="3" width="18" height="18" rx="5"/>
-              <circle cx="12" cy="12" r="4"/>
-              <circle cx="18" cy="6" r="1"/>
-            </svg>
-          </a>
-          <a href="#" aria-label="Facebook">
-            <svg viewBox="0 0 24 24">
-              <path d="M14 8h4V3h-4c-3.3 0-5 2-5 5v3H6v5h3v5h5v-5h3l1-5h-4V8c0-.7.3-1 1-1z"/>
-            </svg>
-          </a>
+    <div class="products-grid">
+      <!-- Produto 1 -->
+      <article class="product-card reveal">
+        <div class="product-icon">
+         
+        </div>
+        <h3>Limpeza & Cuidado</h3>
+        <p>Shampoos, condicionadores e produtos de higiene para manter seu pet limpo, cheiroso e bem cuidado.</p>
+        <a href="https://wa.me/20002020202111?text=Quero%20ver%20%C3%B3prodt" target="_blank" rel="noopener" class="product-link" data-ga="prod-limpeza">
+          Consultar produtos e preços
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+
+      <!-- Produto 2 -->
+      <article class="product-card reveal">
+        <div class="product-icon">
+         
+        </div>
+        <h3>Acessórios</h3>
+        <p>Escovas, roupas, caminhas e acessórios para pets de diferentes portes e tipos de pelagem.</p>
+        <a href="https://wa.me/20002020202112?text=Quero%20ver%20prodt" target="_blank" rel="noopener" class="product-link" data-ga="prod-acess">
+          Consultar produtos e preços
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+
+      <!-- Produto 3 -->
+      <article class="product-card reveal">
+        <div class="product-icon">
+        
+        </div>
+        <h3>Outros produtos </h3>
+        <p>Coleiras, guias, plaquinhas de identificação e caixas de transporte para mais segurança nos passeios e viagens.</p>
+        <a href="https://wa.me/20002022102112?text=Quero%20ver%20prodt" target="_blank" rel="noopener" class="product-link" data-ga="prod-freio">
+          Consultar produtos e preços
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+
+      <!-- Produto 4 -->
+      <article class="product-card reveal">
+        <div class="product-icon">
+        
+        </div>
+        <h3>Rações</h3>
+        <p>Opções de rações de marcas reconhecidas para diferentes fases da vida e necessidades dos pets.</p>
+        <a href="https://wa.me/21002020202112?text=Quero%20ver%20prodt" target="_blank" rel="noopener" class="product-link" data-ga="prod-corrente">
+          Consultar produtos e preços
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+
+      <!-- Produto 5 -->
+      <article class="product-card reveal">
+        <div class="product-icon">
+         
+        </div>
+        <h3>Petiscos</h3>
+        <p>Petiscos para agradar, recompensar e tornar os momentos com seu companheiro ainda mais especiais.</p>
+        <a href="https://wa.me/20100020202112?text=Quero%20ver%20prodt" target="_blank" rel="noopener" class="product-link" data-ga="prod-esc">
+          Consultar produtos e preços
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+
+      <!-- Produto 6 -->
+      <article class="product-card reveal">
+        <div class="product-icon">
+         
+        </div>
+        <h3>Brinquedos</h3>
+        <p>Mordedores, puxa-puxa, bola de arremessar, entre outros. Tudo para divertir seu pet ao máximo.</p>
+        <a href="https://wa.me/211002020202112?text=Quero%20ver%20prodt" target="_blank" rel="noopener" class="product-link" data-ga="prod-motor">
+          Consultar produtos e preços
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HISTÓRIA ================= -->
+<section class="section history" id="historia">
+  <div class="container">
+    <div class="history-grid">
+      <div class="history-text reveal">
+        <span class="section-tag">Nossa História</span>
+        <h2 class="section-title" style="text-align:left">De uma portinha de bairro a referência em São Paulo</h2>
+        <p class="lead">A CãoPanheiro nasceu em 2016, numa garagem de 40m², com uma banheira simples, duas tesouras de tosa e a certeza de que os pets e seus tutores mereciam mais.</p>
+        <p>Dez anos depois, somos um centro de cuidado completo: estética pet, consultoria de bem-estar, as melhores marcas de ração e uma comunidade de mais de 5.000 famílias atendidas. O que não mudou? O petisco no balcão, o atendimento chamando o tutor e o animalzinho pelo nome, e a obsessão por acolher e resolver — do primeiro banho ao cuidado na velhice.</p>
+        <p>Nosso time é formado por apaixonados por animais de verdade. Gente que convive, cuida e sabe, na prática, o amor e a responsabilidade que é ter um filho de quatro patas na família.</p>
+      </div>
+      <div class="history-stats reveal">
+        <div class="stat-box">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Anos de cuidado</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">5k+</div>
+          <div class="stat-label">Famílias atendidas</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">2k+</div>
+          <div class="stat-label">Produtos para seu pet</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">98%</div>
+          <div class="stat-label">Satisfação</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVIÇOS ================= -->
+<section class="section" id="servicos">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Serviços</span>
+      <h2 class="section-title">Cuidado especializado para seu pet</h2>
+      <p class="section-desc">Do banho à tosa e à orientação de bem-estar: cuidado atencioso para cada fase da vida do seu pet.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon" aria-hidden="true"><span class="service-symbol">♥</span></div>
+        <div class="service-content">
+          <h3>Banho e Higiene</h3>
+          <p>Banho cuidadoso com produtos adequados para ajudar seu pet a ficar limpo, confortável e cheiroso.</p>
         </div>
       </div>
 
-      <div class="footer-col">
-        <h4>Navegação</h4>
-        <ul>
-          <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#historia">Nossa História</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#localizacao">Localização</a></li>
-        </ul>
+      <div class="service-card reveal">
+        <div class="service-icon" aria-hidden="true"><span class="service-symbol">♥</span></div>
+        <div class="service-content">
+          <h3>Tosa com cuidado</h3>
+          <p>Tosa feita com atenção às características, ao conforto e às necessidades de cada animal.</p>
+        </div>
       </div>
 
-      <div class="footer-col">
-        <h4>Produtos</h4>
-        <ul>
-          <li><a href="#produtos">Limpeza e cuidado</a></li>
-          <li><a href="#produtos">Acessórios</a></li>
-          <li><a href="#produtos">Rações</a></li>
-          <li><a href="#produtos">Brinquedos</a></li>
-        </ul>
+      <div class="service-card reveal">
+        <div class="service-icon" aria-hidden="true"><span class="service-symbol">♥</span></div>
+        <div class="service-content">
+          <h3>Revisão Completa</h3>
+          <p>Atenção aos detalhes para que cada visita seja tranquila e adaptada ao seu companheiro.</p>
+        </div>
       </div>
 
-      <div class="footer-col">
-        <h4>Contato</h4>
-        <ul>
-          <li>
-            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">
-              WhatsApp
-            </a>
-          </li>
-          <li><a href="#localizacao">Endereço</a></li>
-          <li><a href="#localizacao">Horários</a></li>
-        </ul>
+      <div class="service-card reveal">
+        <div class="service-icon" aria-hidden="true"><span class="service-symbol">♥</span></div>
+        <div class="service-content">
+          <h3>Consultoria de Bem-estar</h3>
+          <p>Orientações gerais sobre rotina, higiene, enriquecimento ambiental e cuidados diários com seu pet.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="footer-bottom">
-      <p>© 2026 CãoPanheiro. Todos os direitos reservados.</p>
-      <p>Feito com carinho para quem ama os pets.</p>
+      <div class="service-card reveal">
+        <div class="service-icon" aria-hidden="true"><span class="service-symbol">♥</span></div>
+        <div class="service-content">
+          <h3>Cuidados personalizados</h3>
+          <p>Sugestões de produtos e cuidados considerando a rotina e as características do seu animal.</p>
+        </div>
+      </div>
     </div>
   </div>
-</footer>
+</section>
 
-<!-- Botão flutuante do WhatsApp -->
-<a
-  href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!"
-  class="whatsapp-float"
-  target="_blank"
-  rel="noopener"
-  aria-label="Fale conosco pelo WhatsApp">
-  <svg viewBox="0 0 24 24">
-    <path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.4A10 10 0 1012 2zm5.4 14.3c-.2.6-1.3 1.2-1.8 1.2-.5.1-1.1.1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-4-4.6-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .4l-.4.6c-.2.2-.3.4-.1.6.2.3.7 1.2 1.6 1.9 1.1.9 1.9 1.2 2.2 1.4.2.1.4.1.6-.1.1-.2.6-.7.8-1 .1-.2.3-.2.5-.1l2 1c.2.1.4.1.4.2 0 .1 0 .6-.2 1.2z"/>
-  </svg>
-</a>
 <!-- ================= LOCALIZAÇÃO ================= -->
 <section class="section location" id="localizacao">
   <div class="container">
@@ -695,7 +782,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="#" class="logo">
-          <span class="logo-mark">T</span>
+          <span class="logo-mark">C</span>
           Cão<span>Panheiro</span>
         </a>
         <p>Produtos, estética pet e cuidado acolhedor para famílias de São Paulo. Há 10 anos cuidando de quem faz parte da família.</p>
@@ -785,14 +872,18 @@ const io = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
 /* ========== GA4 EVENT TRACKING (opcional) ========== */
+// Descomente e configure seu ID GA4 para ativar o rastreamento de cliques
 document.querySelectorAll('[data-ga]').forEach(el => {
   el.addEventListener('click', () => {
     const eventName = el.dataset.ga;
+    // if (typeof gtag === 'function') {
+    //   gtag('event', 'cta_click', { cta_id: eventName });
+    // }
     console.log('[GA4] Evento:', eventName);
   });
 });
 
-/* ========== SCROLL SUAVE PARA ÂNCORAS ========== */
+/* ========== SCROLL SUAVE PARA ÂNCORAS (fallback p/ Safari antigo) ========== */
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', (e) => {
     const targetId = link.getAttribute('href');
@@ -809,3 +900,4 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 </script>
 </body>
 </html>
+
